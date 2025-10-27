@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "abhishek-s3-demo-xyz" # change this
+    bucket         = "securebank-s3-demo-bucke" # change this
     key            = "abhi/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
