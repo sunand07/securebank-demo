@@ -1,21 +1,21 @@
-variable "cidr_block" {
-  description = "CIDR block for the VPC"
+variable "aws_region" {
+  description = "The AWS region to deploy resources in"
+  type        = string
+  default     = "us-east-1"
+}
+
+variable "ami_id" {
+  description = "AMI to use for the EC2 instance"
   type        = string
 }
 
-variable "vpc_name" {
-  description = "Name tag for the VPC"
+variable "instance_type" {
+  description = "EC2 instance type"
   type        = string
+  default     = "t2.micro"
 }
 
-variable "public_subnet_count" {
-  description = "Number of public subnets"
-  type        = number
-  default     = 2
-}
-
-variable "private_subnet_count" {
-  description = "Number of private subnets"
-  type        = number
-  default     = 2
+variable "key_name" {
+  description = "SSH key name"
+  type        = string
 }
